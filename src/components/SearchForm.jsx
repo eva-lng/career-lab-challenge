@@ -9,7 +9,8 @@ export function SearchForm({ onSearchSubmit }) {
 		setQuery(evt.target.value);
 	}
 
-	function handleFormSubmit() {
+	async function handleFormSubmit(e) {
+		e.preventDefault();
 		onSearchSubmit(query);
 	}
 
